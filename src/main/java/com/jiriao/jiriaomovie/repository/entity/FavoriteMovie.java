@@ -1,6 +1,11 @@
 package com.jiriao.jiriaomovie.repository.entity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "jms_favorites")
@@ -12,8 +17,8 @@ public class FavoriteMovie {
     private String imdbId;
 
     public FavoriteMovie(){
-
     }
+
     public FavoriteMovie(String imdbId){
         this.imdbId = imdbId;
     }

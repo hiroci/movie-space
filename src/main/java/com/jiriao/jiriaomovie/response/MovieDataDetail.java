@@ -1,5 +1,6 @@
 package com.jiriao.jiriaomovie.response;
 
+//TODO adicionar Lombok
 public class MovieDataDetail {
 
     private String title;
@@ -10,7 +11,6 @@ public class MovieDataDetail {
     private String plot;
     private String released;
     private String imdbRating;
-
 
     public String getYear() {
         return year;

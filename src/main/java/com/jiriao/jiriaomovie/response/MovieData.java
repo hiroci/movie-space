@@ -6,12 +6,6 @@ public class MovieData {
     private String posterUrl;
     private String imdbId;
 
-    public MovieData(String title, String posterUrl, String imdbId) {
-        this.title = title;
-        this.posterUrl = posterUrl;
-        this.imdbId = imdbId;
-    }
-
     public String getTitle() {
         return title;
     }

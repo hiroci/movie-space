@@ -6,15 +6,21 @@ import com.jiriao.jiriaomovie.source.MovieDataRaw;
 
 public class MovieDataMapper {
 
-    public static MovieData mapMovieData(MovieDataRaw movieDataRaw){
+    private MovieDataMapper() {
 
-        MovieData movie = new MovieData(movieDataRaw.getTitle(), movieDataRaw.getPoster(), movieDataRaw.getImdbID());
+    }
+
+    public static MovieData mapMovieData(MovieDataRaw movieDataRaw) {
+        MovieData movie = new MovieData();
+
+        movie.setImdbId(movieDataRaw.getImdbID());
+        movie.setPosterUrl(movieDataRaw.getPoster());
+        movie.setTitle(movieDataRaw.getTitle());
 
         return movie;
     }
 
-    public static MovieDataDetail mapMovieDataDetail(MovieDataRaw movieDataRaw){
-
+    public static MovieDataDetail mapMovieDataDetail(MovieDataRaw movieDataRaw) {
         MovieDataDetail movie = new MovieDataDetail();
 
         movie.setTitle(movieDataRaw.getTitle());

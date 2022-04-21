@@ -2,7 +2,6 @@ package com.jiriao.jiriaomovie.source;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.jiriao.jiriaomovie.source.MovieDataRaw;
 
 import java.util.List;
 
