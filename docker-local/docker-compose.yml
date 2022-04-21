@@ -1,0 +1,29 @@
+version: '3.1'
+
+services:
+  db:
+    networks:
+      - postgres-network
+    ports:
+      - "15432:5432"
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: "123"
+
+
+  pgadmin:
+    networks:
+      - postgres-network
+    ports:
+      - "16543:80"
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "cuckenborger@hotswap.com"
+      PGADMIN_DEFAULT_PASSWORD: "123"
+    depends_on:
+      - db
+
+networks:
+  postgres-network:
+    driver: bridge
